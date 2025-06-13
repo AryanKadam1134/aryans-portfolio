@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Certificates from "@/components/Certificates";
+import Education from "@/components/Education";
+import StarryBackground from "@/components/StarryBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-x-hidden">
+      <StarryBackground />
+      <Navbar />
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Certificates />
+        <Education />
+      </main>
     </div>
   );
 };
