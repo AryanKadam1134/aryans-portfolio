@@ -18,23 +18,25 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-16 px-6">
-      <div className="container mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">
-          Education
+    <section id="education" className="py-20 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Academic Background
+          </span>
         </h2>
-        <div className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {education.map((edu, index) => (
             <div 
               key={index}
-              className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-lg p-6 flex items-start gap-4"
+              className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105"
             >
-              <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <GraduationCap className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <GraduationCap className="w-6 h-6 text-purple-400" />
               </div>
               <div className="flex-grow">
                 <h3 className="text-lg font-semibold text-white mb-1">{edu.degree}</h3>
-                <h4 className="text-blue-400 mb-2">{edu.school}</h4>
+                <h4 className="text-purple-400 mb-2">{edu.school}</h4>
                 <div className="flex gap-4 text-sm text-gray-500">
                   <span>{edu.year}</span>
                   <span>GPA: {edu.gpa}</span>

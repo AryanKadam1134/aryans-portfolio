@@ -6,7 +6,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'skills', 'certificates', 'education'];
+      const sections = ['hero', 'projects', 'skills', 'certificates', 'education'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -31,10 +31,9 @@ const Navbar = () => {
 
   const navItems = [
     { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'certificates', label: 'Certificates' },
+    { id: 'certificates', label: 'Certifications' },
     { id: 'education', label: 'Education' }
   ];
 

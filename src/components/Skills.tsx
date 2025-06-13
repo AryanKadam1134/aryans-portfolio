@@ -2,34 +2,34 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Frontend Technologies",
       icon: "💻",
       skills: [
-        { name: "React.js", color: "text-blue-400" },
-        { name: "JavaScript", color: "text-yellow-400" },
-        { name: "HTML5", color: "text-orange-400" },
-        { name: "CSS3", color: "text-blue-500" },
-        { name: "Bootstrap", color: "text-purple-400" },
-        { name: "TailwindCSS", color: "text-cyan-400" }
+        { name: "React.js", color: "text-blue-400", logo: "⚛️" },
+        { name: "JavaScript", color: "text-yellow-400", logo: "🟨" },
+        { name: "HTML5", color: "text-orange-400", logo: "🌐" },
+        { name: "CSS3", color: "text-blue-500", logo: "🎨" },
+        { name: "Bootstrap", color: "text-purple-400", logo: "🅱️" },
+        { name: "TailwindCSS", color: "text-cyan-400", logo: "🌊" }
       ]
     },
     {
-      title: "Backend", 
+      title: "Backend Technologies", 
       icon: "🗄️",
       skills: [
-        { name: "Node.js", color: "text-green-400" },
-        { name: "Express.js", color: "text-gray-400" },
-        { name: "Python", color: "text-yellow-400" },
-        { name: "Flask", color: "text-red-400" }
+        { name: "Node.js", color: "text-green-400", logo: "🟢" },
+        { name: "Express.js", color: "text-gray-400", logo: "🚂" },
+        { name: "Python", color: "text-yellow-400", logo: "🐍" },
+        { name: "Flask", color: "text-red-400", logo: "🌶️" }
       ]
     },
     {
-      title: "Database",
-      icon: "🗃️", 
+      title: "Database & Cloud",
+      icon: "☁️", 
       skills: [
-        { name: "Firebase", color: "text-orange-400" },
-        { name: "MySQL", color: "text-blue-400" },
-        { name: "Supabase", color: "text-green-400" }
+        { name: "Firebase", color: "text-orange-400", logo: "🔥" },
+        { name: "MySQL", color: "text-blue-400", logo: "🐬" },
+        { name: "Supabase", color: "text-green-400", logo: "⚡" }
       ]
     }
   ];
@@ -39,7 +39,7 @@ const Skills = () => {
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Skills
+            Technical Skills
           </span>
         </h2>
         
@@ -57,6 +57,9 @@ const Skills = () => {
                     key={skillIndex}
                     className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-slate-600 transition-all duration-300 hover:scale-105 group"
                   >
+                    <div className="mb-3 text-3xl group-hover:scale-110 transition-transform">
+                      {skill.logo}
+                    </div>
                     <div className={`text-lg font-semibold ${skill.color} group-hover:scale-110 transition-transform`}>
                       {skill.name}
                     </div>
