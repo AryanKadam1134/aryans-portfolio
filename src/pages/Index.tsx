@@ -12,15 +12,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden">
       <StarryBackground />
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Certificates />
-        <Education />
-      </main>
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Certificates />
+          <Education />
+        </main>
+      </div>
     </div>
   );
 };
