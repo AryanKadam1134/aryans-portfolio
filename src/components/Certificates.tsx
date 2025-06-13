@@ -1,61 +1,49 @@
 
-import { Award, Calendar } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const Certificates = () => {
   const certificates = [
     {
-      title: "AWS Certified Solutions Architect",
+      title: "AWS Solutions Architect",
       issuer: "Amazon Web Services",
-      date: "2023",
-      description: "Professional level certification for designing distributed systems on AWS"
+      date: "2023"
     },
     {
-      title: "Google Cloud Professional Developer",
+      title: "Google Cloud Developer",
       issuer: "Google Cloud",
-      date: "2022",
-      description: "Demonstrates expertise in developing scalable applications on Google Cloud Platform"
+      date: "2022"
     },
     {
-      title: "React Advanced Patterns",
+      title: "React Advanced",
       issuer: "Meta",
-      date: "2023",
-      description: "Advanced React concepts including hooks, context, and performance optimization"
+      date: "2023"
     },
     {
-      title: "Full Stack Web Development",
+      title: "Full Stack Development",
       issuer: "freeCodeCamp",
-      date: "2021",
-      description: "Comprehensive certification covering frontend and backend development"
+      date: "2021"
     }
   ];
 
   return (
-    <section id="certificates" className="py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+    <section id="certificates" className="py-16 px-6">
+      <div className="container mx-auto max-w-4xl">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
           Certificates
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {certificates.map((cert, index) => (
             <div 
               key={index}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-lg p-5 flex items-start gap-4"
             >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-2 text-white">{cert.title}</h3>
-                  <p className="text-blue-400 font-medium mb-2">{cert.issuer}</p>
-                  <div className="flex items-center space-x-2 mb-3">
-                    <Calendar className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-400 text-sm">{cert.date}</span>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{cert.description}</p>
-                </div>
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Award className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-1">{cert.title}</h3>
+                <p className="text-blue-400 text-sm mb-1">{cert.issuer}</p>
+                <span className="text-gray-500 text-sm">{cert.date}</span>
               </div>
             </div>
           ))}

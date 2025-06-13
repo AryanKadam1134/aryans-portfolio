@@ -10,7 +10,7 @@ import StarryBackground from "@/components/StarryBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden">
       <StarryBackground />
       <Navbar />
       <main className="relative z-10">

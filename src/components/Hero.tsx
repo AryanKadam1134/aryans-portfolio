@@ -11,30 +11,28 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
-      <div className="text-center space-y-6 animate-fade-in">
-        <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+      <div className="text-center space-y-4">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
           John Doe
         </h1>
-        <h2 className="text-2xl md:text-3xl text-gray-300 font-light">
+        <h2 className="text-xl md:text-2xl text-gray-400 font-light mb-6">
           Full Stack Developer
         </h2>
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-          Passionate about creating innovative web solutions and bringing ideas to life through code
+        <p className="text-gray-500 max-w-xl mx-auto mb-8">
+          Building digital experiences with modern technologies
         </p>
-        <div className="flex justify-center space-x-4 pt-8">
-          <button 
-            onClick={scrollToAbout}
-            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-          >
-            Explore My Work
-          </button>
-        </div>
+        <button 
+          onClick={scrollToAbout}
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white transition-colors"
+        >
+          View Work
+        </button>
       </div>
       <button 
         onClick={scrollToAbout}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
-        <ChevronDown className="w-8 h-8 text-white/60" />
+        <ChevronDown className="w-6 h-6 text-gray-500" />
       </button>
     </section>
   );

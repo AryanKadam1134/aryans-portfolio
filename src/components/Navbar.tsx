@@ -39,19 +39,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/20 backdrop-blur-lg border-b border-slate-700/30">
+      <div className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-lg font-bold text-blue-400">
             Portfolio
           </div>
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-6">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`transition-colors duration-300 hover:text-blue-400 ${
-                    activeSection === item.id ? 'text-blue-400' : 'text-white/80'
+                  className={`text-sm transition-colors duration-300 hover:text-blue-400 ${
+                    activeSection === item.id ? 'text-blue-400' : 'text-gray-400'
                   }`}
                 >
                   {item.label}
