@@ -1,7 +1,9 @@
-
 import { Award } from 'lucide-react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Certificates = () => {
+  useIntersectionObserver();
+
   const certificates = [
     {
       title: "AWS Solutions Architect",
@@ -28,7 +30,7 @@ const Certificates = () => {
   return (
     <section id="certificates" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 fade-in">
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Professional Certifications
           </span>
@@ -37,7 +39,9 @@ const Certificates = () => {
           {certificates.map((cert, index) => (
             <div 
               key={index}
-              className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105"
+              className={`bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105 ${
+                index % 2 === 0 ? 'fade-in-left' : 'fade-in-right'
+              }`}
             >
               <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Award className="w-6 h-6 text-blue-400" />
