@@ -45,9 +45,9 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Enhanced starry animation variables */
-    --gradient-start: #0a0a0f;
-    --gradient-end: #1a1a2e;
+    /* Updated gradient variables */
+    --gradient-start: #09090f;
+    --gradient-end: #171923;
     --accent-color: #6366f1;
   }
 
@@ -109,7 +109,14 @@
     height: 100vh;
     z-index: 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+    /* Updated gradient for a more subtle transition */
+    background: linear-gradient(180deg, 
+        #09090f 0%,
+        #0d0d14 25%,
+        #111319 50%,
+        #14161e 75%,
+        #171923 100%
+    );
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
@@ -156,13 +163,13 @@
     border-radius: 50%;
 }
 
-/* Enhanced twinkling star */
+/* Update twinkling star styles for subtler glow */
 .twinkling-star {
     position: absolute;
     border-radius: 50%;
-    animation: twinkle 3s infinite;
-    background-color: var(--accent-color);
-    box-shadow: 0 0 20px var(--accent-color);
+    animation: twinkle 4s infinite;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
     pointer-events: none;
     z-index: 2;
 }
@@ -179,17 +186,18 @@
     }
 }
 
+/* Soften the twinkling animation */
 @keyframes twinkle {
     0% { 
-        opacity: 0.3;
+        opacity: 0.2;
         transform: scale(0.8);
     }
     50% { 
-        opacity: 1;
-        transform: scale(1.2);
+        opacity: 0.6;
+        transform: scale(1.1);
     }
     100% { 
-        opacity: 0.3;
+        opacity: 0.2;
         transform: scale(0.8);
     }
 }

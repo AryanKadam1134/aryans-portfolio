@@ -4,16 +4,22 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      year: "2019 - 2021",
-      gpa: "3.8/4.0"
+      degree: "Bachelor of Engineering in Computer Science & Engineering",
+      school: "SSPM's College of Engineering, Mumbai University",
+      year: "2021 - 2025",
+      gpa: "-"
     },
     {
-      degree: "Bachelor of Science in Software Engineering", 
-      school: "University of California, Berkeley",
-      year: "2015 - 2019",
-      gpa: "3.7/4.0"
+      degree: "HSC in Science", 
+      school: "R. K. Talreja College of Arts, Science & Commerce",
+      year: "2019 - 2021",
+      gpa: "80.5 %"
+    },
+    {
+      degree: "SSC", 
+      school: "SPP New Era High School",
+      year: "2018 - 2019",
+      gpa: "68 %"
     }
   ];
 

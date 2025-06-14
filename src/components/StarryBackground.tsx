@@ -1,16 +1,14 @@
-
 import { useEffect } from 'react';
 
 const StarryBackground = () => {
   useEffect(() => {
-    // Enhanced star colors configuration with better visibility
+    // Update the star colors configuration for subtler colors
     const starColors = {
-      red: '#ff6b6b',
-      blue: '#4dabf7',
-      yellow: '#ffd43b',
-      white: '#ffffff',
-      purple: '#9775fa',
-      green: '#51cf66'
+      white: 'rgba(255, 255, 255, 0.8)',
+      blue: 'rgba(77, 171, 247, 0.6)',
+      yellow: 'rgba(255, 212, 59, 0.5)',
+      purple: 'rgba(151, 117, 250, 0.5)',
+      cyan: 'rgba(34, 211, 238, 0.5)'
     };
 
     // Create enhanced twinkling stars
@@ -49,7 +47,7 @@ const StarryBackground = () => {
         
         const color = colors[Math.floor(Math.random() * colors.length)];
         star.style.backgroundColor = color;
-        star.style.boxShadow = `0 0 ${size * 6}px ${color}, 0 0 ${size * 12}px ${color}40`;
+        star.style.boxShadow = `0 0 ${size * 2}px ${color}40`; // Reduced glow effect
         
         starsContainer.appendChild(star);
       }
@@ -59,7 +57,13 @@ const StarryBackground = () => {
     // Enhanced multiple box shadows for background stars
     function multiple_box_shadow(n: number) {
       let value = '';
-      const colors = ['#ffffff', '#4f46e5', '#7c3aed', '#2563eb', '#0891b2', '#059669'];
+      const colors = [
+        'rgba(255, 255, 255, 0.8)',
+        'rgba(79, 70, 229, 0.4)',
+        'rgba(124, 58, 237, 0.4)',
+        'rgba(37, 99, 235, 0.4)',
+        'rgba(8, 145, 178, 0.4)'
+      ];
       
       for(let i = 0; i < n; i++) {
         const x = Math.floor(Math.random() * 2000);

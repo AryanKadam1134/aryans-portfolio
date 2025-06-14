@@ -1,4 +1,4 @@
-import { Award } from 'lucide-react';
+import { Award, ExternalLink } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Certificates = () => {
@@ -6,24 +6,28 @@ const Certificates = () => {
 
   const certificates = [
     {
-      title: "AWS Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023"
+      title: "Google UI/UX Professional Certificate",
+      issuer: "Coursera",
+      date: "2025",
+      url: "https://www.coursera.org/certificate/example" // Add your actual certificate URL
     },
     {
-      title: "Google Cloud Developer",
-      issuer: "Google Cloud",
-      date: "2022"
+      title: "1st Runner Up in Hackathon",
+      issuer: "Beachack Season 6",
+      date: "08/03/2025",
+      url: "https://example.com/beachack-certificate" // Add your actual certificate URL
     },
     {
-      title: "React Advanced",
-      issuer: "Meta",
-      date: "2023"
+      title: "Finalist in Hackathon",
+      issuer: "AceHack 5.0",
+      date: "29/04/2025",
+      url: "https://example.com/acehack-certificate" // Add your actual certificate URL
     },
     {
       title: "Full Stack Development",
       issuer: "freeCodeCamp",
-      date: "2021"
+      date: "2021",
+      url: "https://www.freecodecamp.org/certification/example" // Add your actual certificate URL
     }
   ];
 
@@ -39,17 +43,28 @@ const Certificates = () => {
           {certificates.map((cert, index) => (
             <div 
               key={index}
-              className={`bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105 ${
+              className={`bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105 group ${
                 index % 2 === 0 ? 'fade-in-left' : 'fade-in-right'
               }`}
             >
               <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Award className="w-6 h-6 text-blue-400" />
               </div>
-              <div>
+              <div className="flex-grow">
                 <h3 className="text-lg font-semibold text-white mb-1">{cert.title}</h3>
                 <p className="text-blue-400 text-sm mb-1">{cert.issuer}</p>
-                <span className="text-gray-500 text-sm">{cert.date}</span>
+                <span className="text-gray-500 text-sm block mb-3">{cert.date}</span>
+                {cert.url && (
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span className="font-medium">View Certificate</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
