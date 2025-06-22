@@ -7,21 +7,29 @@ const Education = () => {
       degree: "Bachelor of Engineering in Computer Science & Engineering",
       school: "SSPM's College of Engineering, Mumbai University",
       year: "2021 - 2025",
-      gpa: "-"
+      score: "7.86", // CGPA
+      type: "cgpa"
     },
     {
       degree: "HSC in Science", 
       school: "R. K. Talreja College of Arts, Science & Commerce",
       year: "2019 - 2021",
-      gpa: "80.5 %"
+      score: "80.5", // Percentage
+      type: "percentage"
     },
     {
       degree: "SSC", 
       school: "SPP New Era High School",
       year: "2018 - 2019",
-      gpa: "68 %"
+      score: "68", // Percentage
+      type: "percentage"
     }
   ];
+
+  const formatScore = (score: string, type: string) => {
+    if (!score || score === "-") return "Ongoing";
+    return type === "cgpa" ? `CGPA: ${score}` : `Percentage: ${score}%`;
+  };
 
   useIntersectionObserver();
   
@@ -49,7 +57,7 @@ const Education = () => {
                 <h4 className="text-purple-400 mb-2">{edu.school}</h4>
                 <div className="flex gap-4 text-sm text-gray-500">
                   <span>{edu.year}</span>
-                  <span>GPA: {edu.gpa}</span>
+                  <span>{formatScore(edu.score, edu.type)}</span>
                 </div>
               </div>
             </div>
