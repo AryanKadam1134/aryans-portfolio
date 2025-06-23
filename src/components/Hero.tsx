@@ -48,10 +48,7 @@ const Hero = () => {
             </div>
             
             <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 fade-in"> {/* Reduced max width and font size */}
-               Computer Science & Engineering student and Full-Stack Developer with hands-on experience building real-world
-               web applications using technologies like React.js, Node.js, and Supabase. Passionate about solving complex problems,
-               understanding user needs, and delivering clean, scalable solutions. Skilled at working in collaborative team
-               environments and continuously learning new technologies to stay ahead in a fast-paced development landscape.
+               Computer Science & Engineering student and Full-Stack MERN Developer with hands-on experience building real-world web applications using MongoDB, Express.js, React.js, Node.js, and Supabase. Passionate about solving problems, understanding user needs, and delivering scalable, user-friendly solutions. Strong collaborator with a fast-learning mindset and a track record of working in dynamic team environments.
             </p>
 
             <div className="fade-in">

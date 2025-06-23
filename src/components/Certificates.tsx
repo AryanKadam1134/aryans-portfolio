@@ -9,13 +9,13 @@ const Certificates = () => {
       title: "Google UI/UX Professional Certificate",
       issuer: "Coursera",
       date: "2025",
-      url: "https://www.coursera.org/certificate/example" // Add your actual certificate URL
+      url: "https://www.coursera.org/account/accomplishments/verify/2LZEIF3A5M0C" // Add your actual certificate URL
     },
     {
       title: "1st Runner Up in Hackathon",
       issuer: "Beachack Season 6",
       date: "08/03/2025",
-      url: "https://example.com/beachack-certificate" // Add your actual certificate URL
+      url: "public/docs/Beachack Runner-Up.jpeg" // Add your actual certificate URL
     },
     {
       title: "Finalist in Hackathon",
