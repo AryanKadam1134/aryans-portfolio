@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 md:px-6 pt-20 md:pt-28 pb-12 md:pb-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 md:px-6 pt-28 md:pt-32 pb-20 md:pb-16"> {/* Increased top padding for mobile */}
       <div className="container mx-auto max-w-6xl"> {/* Reduced from max-w-7xl */}
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 items-center"> {/* Reduced gaps */}
           {/* Text content - Left side */}
@@ -137,9 +137,9 @@ const Hero = () => {
 
       <button 
         onClick={scrollToProjects}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce bg-slate-800/50 p-2 rounded-full border border-slate-700/50 hover:border-slate-600 hidden md:block" // Added hidden md:block
       >
-        <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-gray-500" />
+        <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-gray-400 hover:text-white transition-colors" />
       </button>
     </section>
   );
