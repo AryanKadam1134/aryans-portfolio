@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 
 const Loader = () => {
+  const [mounted, setMounted] = useState(false);
   const [stars, setStars] = useState<{
     x: number;
     y: number;
     size: number;
     delay: number;
     color: string;
+    shadow: string;
   }[]>([]);
 
   useEffect(() => {
+    setMounted(true);
+
     // Star colors array with their respective opacities
     const starColors = [
       { color: 'rgb(255, 255, 255)', shadow: 'rgba(255, 255, 255, 0.4)' }, // white
@@ -42,8 +46,10 @@ const Loader = () => {
     setStars(newStars);
   }, []);
 
+  if (!mounted) return null;
+
   return (
-    <div className="fixed inset-0 z-50 bg-gradient-to-b from-[#09090f] to-[#171923]">
+    <div className="absolute inset-0 bg-[#09090f]">
       {/* Star field container */}
       <div className="absolute inset-0 overflow-hidden">
         {stars.map((star, i) => (
@@ -67,12 +73,12 @@ const Loader = () => {
           />
         ))}
       </div>
-
-      {/* Loading text */}
+      
+      {/* Centered loading text */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-white/80 text-sm font-light tracking-[0.2em] fade-in-up">
+        <span className="text-white/50 text-sm tracking-widest">
           Loading...
-        </div>
+        </span>
       </div>
     </div>
   );
