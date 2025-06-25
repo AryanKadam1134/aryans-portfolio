@@ -104,7 +104,7 @@ const Hero = () => {
                   Contact Me
                 </button>
                 <a 
-                  href="/docs/Aryan_s_Resume (17).pdf" 
+                  href="/docs/resume.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="px-6 md:px-8 py-2.5 md:py-3 border border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg font-medium transition-all duration-300 text-sm md:text-base"
