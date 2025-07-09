@@ -1,34 +1,34 @@
 import { Award, ExternalLink } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-const Certificates = () => {
+const Achievements = () => {
   useIntersectionObserver();
 
-  const certificates = [
+  const achievements = [
     {
-      title: "Google UI/UX Professional Certificate",
-      issuer: "Coursera",
-      date: "2025",
-      url: "https://www.coursera.org/account/accomplishments/verify/2LZEIF3A5M0C" // Add your actual certificate URL
+      title: "1st Runner Up in Hackathon",
+      issuer: "Beachack Season 6",
+      date: "08/03/2025",
+      url: "public/docs/Beachack Runner-Up.jpeg" // Add your actual certificate URL
     },
     {
-      title: "Full Stack Development",
-      issuer: "freeCodeCamp",
-      date: "2021",
-      url: "https://www.freecodecamp.org/certification/example" // Add your actual certificate URL
-    }
+      title: "Finalist in Hackathon",
+      issuer: "AceHack 5.0",
+      date: "29/04/2025",
+      url: "public/docs/AceHack - 29th Place.jpeg" // Add your actual certificate URL
+    },
   ];
 
   return (
-    <section id="certificates" className="py-20 px-6">
+    <section id="achievements" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 fade-in">
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Professional Certifications
+            Achievements
           </span>
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          {certificates.map((cert, index) => (
+          {achievements.map((cert, index) => (
             <div 
               key={index}
               className={`bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 flex items-start gap-4 hover:border-slate-600 transition-all duration-300 hover:scale-105 group ${
@@ -62,4 +62,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates;
+export default Achievements;
