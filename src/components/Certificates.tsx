@@ -21,7 +21,7 @@ const Certificates = () => {
       title: "Finalist in Hackathon",
       issuer: "AceHack 5.0",
       date: "29/04/2025",
-      url: "https://example.com/acehack-certificate" // Add your actual certificate URL
+      url: "public/docs/AceHack - 29th Place.jpeg" // Add your actual certificate URL
     },
     {
       title: "Full Stack Development",
